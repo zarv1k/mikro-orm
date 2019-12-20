@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[55],{187:function(o){o.exports=JSON.parse('{"id":"index","title":"MikroORM v3","description":"## Table of contents","source":"@site/docs/index.md","permalink":"/docs/index","editUrl":"https://github.com/mikro-orm/mikro-orm/edit/master/docs/docs/index.md"}')}}]);
