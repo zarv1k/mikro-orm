@@ -22,7 +22,7 @@
 
 <link rel="preload" href="/styles.e5c05444.js" as="script">
 
-<link rel="preload" href="/runtime~main.f9ac661d.js" as="script">
+<link rel="preload" href="/runtime~main.ec20d7db.js" as="script">
 
 <link rel="preload" href="/main.397be6de.js" as="script">
 
@@ -38,7 +38,7 @@
 
 <link rel="preload" href="/17896441.7f240ec7.js" as="script">
 
-<link rel="preload" href="/a3713279.4783662b.js" as="script">
+<link rel="preload" href="/a3713279.b8996c1b.js" as="script">
 
 </head>
 <body>
@@ -54,7 +54,7 @@ source file, e.g. <code>Author.ts</code> entity will store cache in <code>temp/A
 generate the cache by running the compiled code locally. That will generate <code>temp/Author.js.json</code>,
 which is the file you will need to deploy alongside your application. </p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="fill-type-or-entity-attributes-everywhere"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#fill-type-or-entity-attributes-everywhere" title="Direct link to heading">#</a>Fill type or entity attributes everywhere</h2><p>What discovery process does is to sniff TS types and save their value to string, so it can be
 used later for validation. You can skip the whole process by simply providing those values
-manually:</p><div class="mdxCodeBlock_iHAB"><pre class="prism-code language-typescript codeBlock_19pQ"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><code class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">@</span><span class="token function maybe-class-name" style="color:rgb(130, 170, 255)">Entity</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token keyword" style="font-style:italic">export</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">class</span><span class="token plain"> </span><span class="token class-name" style="color:rgb(255, 203, 107)">Book</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">implements</span><span class="token plain"> </span><span class="token class-name" style="color:rgb(255, 203, 107)">IdEntity</span><span class="token operator" style="color:rgb(137, 221, 255)">&lt;</span><span class="token maybe-class-name">Book</span><span class="token operator" style="color:rgb(137, 221, 255)">&gt;</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
+manually:</p><div class="mdxCodeBlock_iHAB"><pre class="prism-code language-typescript codeBlock_19pQ"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><code class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">@</span><span class="token function maybe-class-name" style="color:rgb(130, 170, 255)">Entity</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token keyword" style="font-style:italic">export</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">class</span><span class="token plain"> </span><span class="token class-name" style="color:rgb(255, 203, 107)">Book</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  @</span><span class="token function maybe-class-name" style="color:rgb(130, 170, 255)">PrimaryKey</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">type</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(195, 232, 141)">&#x27;number&#x27;</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  id</span><span class="token operator" style="color:rgb(137, 221, 255)">!</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(130, 170, 255)">number</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  @</span><span class="token function maybe-class-name" style="color:rgb(130, 170, 255)">Property</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">type</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(195, 232, 141)">&#x27;string&#x27;</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  title</span><span class="token operator" style="color:rgb(137, 221, 255)">!</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(130, 170, 255)">string</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  @</span><span class="token function maybe-class-name" style="color:rgb(130, 170, 255)">Enum</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">type</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(195, 232, 141)">&#x27;BookStatus&#x27;</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  status</span><span class="token operator" style="color:rgb(137, 221, 255)">?</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token maybe-class-name">BookStatus</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
@@ -91,7 +91,7 @@ MikroORM: the mentioned pieces of code won&#x27;t be executed if properly bundle
 
 <script src="/styles.e5c05444.js"></script>
 
-<script src="/runtime~main.f9ac661d.js"></script>
+<script src="/runtime~main.ec20d7db.js"></script>
 
 <script src="/main.397be6de.js"></script>
 
@@ -107,7 +107,7 @@ MikroORM: the mentioned pieces of code won&#x27;t be executed if properly bundle
 
 <script src="/17896441.7f240ec7.js"></script>
 
-<script src="/a3713279.4783662b.js"></script>
+<script src="/a3713279.b8996c1b.js"></script>
 
 
 </body>
