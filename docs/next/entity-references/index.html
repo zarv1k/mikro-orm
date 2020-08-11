@@ -22,7 +22,7 @@
 
 <link rel="preload" href="/styles.97cd1eb9.js" as="script">
 
-<link rel="preload" href="/runtime~main.b3c39d87.js" as="script">
+<link rel="preload" href="/runtime~main.0a82d0d0.js" as="script">
 
 <link rel="preload" href="/main.cad4d1e3.js" as="script">
 
@@ -38,7 +38,7 @@
 
 <link rel="preload" href="/17896441.6776b76e.js" as="script">
 
-<link rel="preload" href="/79b08830.7f34aea2.js" as="script">
+<link rel="preload" href="/79b08830.c4590adc.js" as="script">
 
 </head>
 <body>
@@ -59,7 +59,7 @@ defining <code>load(): Promise&lt;T&gt;</code> method that will first lazy load 
 available. You can also use <code>unwrap(): T</code> method to access the underlying entity without loading
 it.</p><p>You can also use <code>get&lt;K extends keyof T&gt;(prop: K): Promise&lt;T[K]&gt;</code> helper, that will call <code>load()</code>
 for you, making sure the entity is initialized first, then returning the value of given property
-directly. </p><div class="mdxCodeBlock_iHAB"><pre class="prism-code language-typescript codeBlock_19pQ"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><code class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token keyword" style="font-style:italic">import</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"> </span><span class="token maybe-class-name">Entity</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token maybe-class-name">IdentifiedReference</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token maybe-class-name">ManyToOne</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token maybe-class-name">PrimaryKey</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token maybe-class-name">Reference</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">from</span><span class="token plain"> </span><span class="token string" style="color:rgb(195, 232, 141)">&#x27;mikro-orm&#x27;</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
+directly. </p><div class="mdxCodeBlock_iHAB"><pre class="prism-code language-typescript codeBlock_19pQ"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><code class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token keyword" style="font-style:italic">import</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"> </span><span class="token maybe-class-name">Entity</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token maybe-class-name">IdentifiedReference</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token maybe-class-name">ManyToOne</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token maybe-class-name">PrimaryKey</span><span class="token punctuation" style="color:rgb(199, 146, 234)">,</span><span class="token plain"> </span><span class="token maybe-class-name">Reference</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">from</span><span class="token plain"> </span><span class="token string" style="color:rgb(195, 232, 141)">&#x27;@mikro-orm/core&#x27;</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">@</span><span class="token function maybe-class-name" style="color:rgb(130, 170, 255)">Entity</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token keyword" style="font-style:italic">export</span><span class="token plain"> </span><span class="token keyword" style="font-style:italic">class</span><span class="token plain"> </span><span class="token class-name" style="color:rgb(255, 203, 107)">Book</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  @</span><span class="token function maybe-class-name" style="color:rgb(130, 170, 255)">PrimaryKey</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  id</span><span class="token operator" style="color:rgb(137, 221, 255)">!</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token builtin" style="color:rgb(130, 170, 255)">number</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  @</span><span class="token function maybe-class-name" style="color:rgb(130, 170, 255)">ManyToOne</span><span class="token punctuation" style="color:rgb(199, 146, 234)">(</span><span class="token punctuation" style="color:rgb(199, 146, 234)">)</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  author</span><span class="token operator" style="color:rgb(137, 221, 255)">!</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token maybe-class-name">IdentifiedReference</span><span class="token operator" style="color:rgb(137, 221, 255)">&lt;</span><span class="token maybe-class-name">Author</span><span class="token operator" style="color:rgb(137, 221, 255)">&gt;</span><span class="token punctuation" style="color:rgb(199, 146, 234)">;</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
@@ -92,7 +92,7 @@ method will query the database only if the entity is not already loaded in Ident
 
 <script src="/styles.97cd1eb9.js"></script>
 
-<script src="/runtime~main.b3c39d87.js"></script>
+<script src="/runtime~main.0a82d0d0.js"></script>
 
 <script src="/main.cad4d1e3.js"></script>
 
@@ -108,7 +108,7 @@ method will query the database only if the entity is not already loaded in Ident
 
 <script src="/17896441.6776b76e.js"></script>
 
-<script src="/79b08830.7f34aea2.js"></script>
+<script src="/79b08830.c4590adc.js"></script>
 
 
 </body>
