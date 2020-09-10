@@ -20,25 +20,25 @@
 <link rel="stylesheet" href="/styles.bc8338fb.css">
 
 
-<link rel="preload" href="/styles.caccb688.js" as="script">
+<link rel="preload" href="/styles.ab677cec.js" as="script">
 
-<link rel="preload" href="/runtime~main.4307a255.js" as="script">
+<link rel="preload" href="/runtime~main.1a7df383.js" as="script">
 
-<link rel="preload" href="/main.3a050a98.js" as="script">
+<link rel="preload" href="/main.c2ef541e.js" as="script">
 
-<link rel="preload" href="/1.1aded2de.js" as="script">
+<link rel="preload" href="/1.7f8e4ee9.js" as="script">
 
-<link rel="preload" href="/2.359d19e7.js" as="script">
+<link rel="preload" href="/2.062ceb4d.js" as="script">
 
-<link rel="preload" href="/3.ce963458.js" as="script">
+<link rel="preload" href="/3.885aa520.js" as="script">
 
-<link rel="preload" href="/1be78505.dddcabb3.js" as="script">
+<link rel="preload" href="/1be78505.c50b3f39.js" as="script">
 
-<link rel="preload" href="/c6c6e257.77aa09ea.js" as="script">
+<link rel="preload" href="/c6c6e257.1f0438ea.js" as="script">
 
-<link rel="preload" href="/17896441.a9087135.js" as="script">
+<link rel="preload" href="/17896441.2c149216.js" as="script">
 
-<link rel="preload" href="/64cdf4f2.5687228c.js" as="script">
+<link rel="preload" href="/64cdf4f2.abc736a6.js" as="script">
 
 </head>
 <body>
@@ -91,25 +91,25 @@ root entity of the single-table inheritance hierarchy.</p><blockquote><p>This pa
 as the behaviour here is pretty much the same.</p></blockquote></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/mikro-orm/mikro-orm/edit/master/docs/docs/inheritance-mapping.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/next/entity-schema"><h5 class="pagination-nav__link--sublabel">Previous</h5><h4 class="pagination-nav__link--label">« Defining Entities via EntitySchema</h4></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/next/metadata-providers"><h5 class="pagination-nav__link--sublabel">Next</h5><h4 class="pagination-nav__link--label">Metadata Providers »</h4></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#mapped-superclasses" class="contents__link">Mapped Superclasses</a></li><li><a href="#single-table-inheritance" class="contents__link">Single Table Inheritance</a><ul><li><a href="#design-time-considerations" class="contents__link">Design-time considerations</a></li><li><a href="#performance-impact" class="contents__link">Performance impact</a></li><li><a href="#sql-schema-considerations" class="contents__link">SQL Schema considerations</a></li></ul></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/installation">Installation &amp; Usage</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/mikro-orm/mikro-orm#-quick-start">Quick Start</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/upgrading-v3-to-v4">Migration from v3 to v4</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/3.6/installation">Version 3.6 docs</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Community</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://join.slack.com/t/mikroorm/shared_invite/enQtNTM1ODYzMzM4MDk3LWM4ZDExMjU5ZDhmNjA2MmM3MWMwZmExNjhhNDdiYTMwNWM0MGY5ZTE3ZjkyZTMzOWExNDgyYmMzNDE1NDI5NjA">Slack</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://stackoverflow.com/questions/ask?tags=mikro-orm">Stack Overflow</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">Social</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a class="footer__link-item" to="https://twitter.com/MikroOrm" href="https://twitter.com/MikroOrm">Twitter</a></li><li class="footer__item"><iframe src="https://ghbtns.com/github-btn.html?user=mikro-orm&amp;repo=mikro-orm&amp;type=star&amp;count=true" style="margin-top:10px" frameborder="0" scrolling="0" width="100" height="30" title="GitHub Stars"></iframe></li><li class="footer__item"><iframe src="https://ghbtns.com/github-btn.html?user=B4nan&amp;type=sponsor" frameborder="0" scrolling="0" width="130" height="30" title="Sponsor B4nan"></iframe></li></ul></div></div><div class="text--center"><div class="margin-bottom--sm"><img class="footer__logo" alt="MikroORM" src="/img/logo-header.svg"></div>Copyright © 2018-2020 Martin Adámek. Built with Docusaurus. Icons made by <a href="https://www.flaticon.com/authors/surang" title="surang">surang</a> and <a href="https://www.flaticon.com/authors/skyclick" title="Skyclick">Skyclick</a>.</div></div></footer>
 </div>
 
-<script src="/styles.caccb688.js"></script>
+<script src="/styles.ab677cec.js"></script>
 
-<script src="/runtime~main.4307a255.js"></script>
+<script src="/runtime~main.1a7df383.js"></script>
 
-<script src="/main.3a050a98.js"></script>
+<script src="/main.c2ef541e.js"></script>
 
-<script src="/1.1aded2de.js"></script>
+<script src="/1.7f8e4ee9.js"></script>
 
-<script src="/2.359d19e7.js"></script>
+<script src="/2.062ceb4d.js"></script>
 
-<script src="/3.ce963458.js"></script>
+<script src="/3.885aa520.js"></script>
 
-<script src="/1be78505.dddcabb3.js"></script>
+<script src="/1be78505.c50b3f39.js"></script>
 
-<script src="/c6c6e257.77aa09ea.js"></script>
+<script src="/c6c6e257.1f0438ea.js"></script>
 
-<script src="/17896441.a9087135.js"></script>
+<script src="/17896441.2c149216.js"></script>
 
-<script src="/64cdf4f2.5687228c.js"></script>
+<script src="/64cdf4f2.abc736a6.js"></script>
 
 
 </body>
