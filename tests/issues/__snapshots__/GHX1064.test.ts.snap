@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GH issue 1064 should not create unique index on primary key column 1`] = `
+"set names 'utf8';
+set session_replication_role = 'replica';
+
+create table \\"app\\" (\\"id\\" serial primary key, \\"name\\" varchar(255) not null);
+
+create table \\"user\\" (\\"app_id\\" int4 not null, \\"name\\" varchar(255) not null);
+alter table \\"user\\" add constraint \\"user_pkey\\" primary key (\\"app_id\\");
+
+alter table \\"user\\" add constraint \\"user_app_id_foreign\\" foreign key (\\"app_id\\") references \\"app\\" (\\"id\\") on update cascade on delete cascade;
+
+set session_replication_role = 'origin';
+"
+`;
+
+exports[`GH issue 1064 should not generate create unique index sql 1`] = `
+"set names 'utf8';
+set session_replication_role = 'replica';
+
+set session_replication_role = 'origin';
+"
+`;
