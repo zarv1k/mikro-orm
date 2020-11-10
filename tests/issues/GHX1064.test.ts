@@ -54,7 +54,8 @@ describe('GH issue 1064', () => {
   it('should not generate create unique index sql', async () => {
     await orm.getSchemaGenerator().createSchema();
 
-    await orm.em.execute('DROP INDEX IF EXISTS user_app_id_index');
+    await orm.em.execute('ALTER TABLE "user"\n' +
+      'DROP CONSTRAINT "user_app_id_unique"');
 
     const sql = await orm.getSchemaGenerator().getUpdateSchemaSQL();
     expect(sql).toMatchSnapshot();
